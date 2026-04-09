@@ -16,6 +16,9 @@ public class Usuario {
     @Column(nullable = false, unique = true)
     private String email;
 
+    public Usuario() {
+    }
+
     public Usuario(String nome, String email) {
         this.nome = nome;
         this.email = email;
