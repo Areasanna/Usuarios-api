@@ -1,4 +1,5 @@
 package com.empresa.usuarios_api.dtos;
 
-public class UsuariosResponse {
+public record UsuariosResponse (Long id, String nome, String email) {
+
 }
