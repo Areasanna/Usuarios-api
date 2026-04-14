@@ -46,4 +46,12 @@ public class UsuarioService {
         }
         usuarioRepository.deleteById(id);
     }
+
+    public void atualizarEmail(Long id, String novoEmail) {
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado"));
+        usuario.setEmail(novoEmail);
+        usuarioRepository.save(usuario);
+    }
+
 }
